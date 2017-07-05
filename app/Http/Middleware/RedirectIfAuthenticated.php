@@ -20,7 +20,7 @@ class RedirectIfAuthenticated
     {
         if (Auth::guard($guard)->check()) {
 
-            dd("Se esta entrando el Redirect Auth");
+            dd(Auth::user()->idrol);
          return redirect('/almacen-venta');
         }
 
