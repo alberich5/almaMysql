@@ -10,6 +10,7 @@ use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 
 class AuthController extends Controller
 {
+
     /*
     |--------------------------------------------------------------------------
     | Registration & Login Controller
@@ -29,7 +30,7 @@ class AuthController extends Controller
      * @var string
      */
     
-    protected $redirectTo = '/almacen-venta';
+    protected $redirectTo = '/admin';
 
     /**
      * Create a new authentication controller instance.
