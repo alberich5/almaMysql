@@ -10,7 +10,7 @@ Route::group(['middleware'=>['auth','admin'],'prefix'=>'admin'],function()
 {
 
 	Route::get('/', function () {    
-		return "Estas dentro de administrador";
+		return "Se encuentra de la ruta de Administrador";
 	});
 
 	 //ruta de categoria

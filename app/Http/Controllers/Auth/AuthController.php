@@ -7,6 +7,7 @@ use Validator;
 use Omar\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
+use Illuminate\Contracts\Auth\Guard;
 
 class AuthController extends Controller
 {
@@ -29,8 +30,9 @@ class AuthController extends Controller
      *
      * @var string
      */
+
     
-    protected $redirectTo = '/admin';
+    protected $redirectTo = '/responsable';
 
     /**
      * Create a new authentication controller instance.
