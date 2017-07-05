@@ -168,3 +168,4 @@ Route::patch('seguridad-usuario-update',['uses'=> 'UsuarioController@update', 'a
 //Rutas para el manejo de login y usuarios
 Route::auth();
 
+Route::get('omar', 'auxiliar\ArticulosController@index');
