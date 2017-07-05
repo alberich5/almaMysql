@@ -20,7 +20,7 @@ class RedirectIfAuthenticated
     {
         if (Auth::guard($guard)->check()) {
 
-            dd(Auth::user()->idrol);
+            dd(Auth::user()->name."-rol->".Auth::user()->idrol);
          return redirect('/almacen-venta');
         }
 

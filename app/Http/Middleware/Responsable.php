@@ -2,6 +2,7 @@
 
 namespace Omar\Http\Middleware;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Contracts\Auth\Guard;
 use Omar\User;
 use Omar\UsuarioRol;
 use Closure;

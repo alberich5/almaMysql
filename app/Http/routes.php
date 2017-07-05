@@ -10,7 +10,7 @@ Route::group(['middleware'=>['auth','admin'],'prefix'=>'admin'],function()
 {
 
 	Route::get('/', function () {    
-		return "Se dirigio a la ruta de Administrador";
+		return redirect()->to('almacen-venta');
 	});
 
 	 //ruta de categoria
@@ -93,13 +93,13 @@ Route::group(['middleware'=>['auth','responsable'],'prefix'=>'responsable'],func
 {
 	 
 	Route::get('/', function () {    
-		return "Estas dentro de responsable";
+		return redirect()->to('responsable/almacen-venta');
 	});
 
 	//ruta de categoria
 Route::get('almacen-categoria', 'CategoriaController@index');
 Route::get('almacen-categoria-crear', 'CategoriaController@create');
-//Route::get('almacen-editar', 'CategoriaController@edit');
+Route::get('almacen-editar', 'CategoriaController@edit');
 
 Route::post('almacen-categoria-store', 'CategoriaController@store');
 Route::patch('almacen-categoria-update/{id}',['uses'=> 'CategoriaController@update', 'as'=> 'almacen-categoria-update']);
