@@ -25,16 +25,20 @@ class Responsable
 
     public function handle($request, Closure $next)
     {
+
         switch ($this->auth->user()->idrol) {
            case '1':
                # Administrador
                 #return  redirect()->to('admin');
-                return redirect()->to('/')->with('redirectPath', '/');
+                return redirect()->to('responsable')->with('redirectPath', '/');
                break;
             case '2':
                # Responsable de agregar productos
                 #return  redirect()->to('responsable');
                break;
+            default:
+            dd("No se encontro nada");
+              break;
            
        }
        return $next($request);
