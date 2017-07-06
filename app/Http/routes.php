@@ -165,5 +165,3 @@ Route::patch('seguridad-usuario-update',['uses'=> 'auxiliar\UsuarioController@up
 
 //Rutas para el manejo de login y usuarios
 Route::auth();
-
-Route::get('omar', 'admin\PruebaController@index');
