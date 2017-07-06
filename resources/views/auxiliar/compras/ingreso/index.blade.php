@@ -1,4 +1,4 @@
-@extends ('layouts.admin')
+@extends ('auxiliar.layouts.admin')
 @section ('contenido')
 <div class="row">
 	<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
@@ -38,7 +38,7 @@
                          <a href="" data-target="#modal-delete-{{$ing->idingreso}}" data-toggle="modal"><button class="btn btn-danger">Cancelar</button></a>
 					</td>
 				</tr>
-				@include('compras.ingreso.modal')
+				@include('auxiliar.compras.ingreso.modal')
 				@endforeach
 			</table>
 		</div>

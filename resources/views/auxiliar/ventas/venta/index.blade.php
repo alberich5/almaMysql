@@ -1,9 +1,9 @@
-@extends ('layouts.admin')
+@extends ('auxiliar.layouts.admin')
 @section ('contenido')
 <div class="row">
 	<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
 		<h3>Listado de Salidas <a href="almacen-venta-crear"><button class="btn btn-success">Nuevo Salida</button></a></h3>
-		@include('ventas.venta.search')
+		@include('auxiliar.ventas.venta.search')
 	</div>
 </div>
 <div id="mover">
@@ -33,11 +33,11 @@
 					<td>{{ $ven->total_venta}}</td>
 					<td>{{ $ven->estado}}</td>
 					<td>
-						<a href="{{URL::action('VentaController@show',$ven->idventa)}}"><button class="btn btn-primary">Detalle</button></a>
+						<a href="{{URL::action('auxiliar\VentaController@show',$ven->idventa)}}"><button class="btn btn-primary">Detalle</button></a>
                          <a href="" data-target="#modal-delete-{{$ven->idventa}}" data-toggle="modal"><button class="btn btn-danger">Cancelar</button></a>
 					</td>
 				</tr>
-				@include('ventas.venta.modal')
+				@include('auxiliar.ventas.venta.modal')
 				@endforeach
 			</table>
 		</div>

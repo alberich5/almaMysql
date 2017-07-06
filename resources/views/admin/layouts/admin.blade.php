@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>ALMACEN AUXILIAR</title>
+    <title>ADMINISTRADOR</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.5 -->
@@ -94,8 +94,8 @@
                 <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
-                <li><a href="{{ url('/almacen-articulo') }}"><i class="fa fa-circle-o"></i> Artículos</a></li>
-                <li><a href="{{ url('/almacen-categoria') }}"><i class="fa fa-circle-o"></i> Categorías</a></li>
+                <li><a href="{{ url('admin/almacen-articulo') }}"><i class="fa fa-circle-o"></i> Artículos</a></li>
+                <li><a href="{{ url('admin/almacen-categoria') }}"><i class="fa fa-circle-o"></i> Categorías</a></li>
               </ul>
             </li>
             
@@ -106,8 +106,8 @@
                  <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
-                <li><a href="{{ url('/almacen-ingreso') }}"><i class="fa fa-circle-o"></i> Ingresos</a></li>
-                <li><a href="{{ url('/almacen-proveedor') }}"><i class="fa fa-circle-o"></i> Proveedores</a></li>
+                <li><a href="{{ url('admin/almacen-ingreso') }}"><i class="fa fa-circle-o"></i> Ingresos</a></li>
+                <li><a href="{{ url('admin/almacen-proveedor') }}"><i class="fa fa-circle-o"></i> Proveedores</a></li>
               </ul>
             </li>
             <li class="treeview">
@@ -117,21 +117,21 @@
                  <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
-                <li><a href="{{ url('/almacen-venta') }}"><i class="fa fa-circle-o"></i> Salida</a></li>
-                <li><a href="{{ url('/almacen-cliente') }}"><i class="fa fa-circle-o"></i> Clientes</a></li>
+                <li><a href="{{ url('admin/almacen-venta') }}"><i class="fa fa-circle-o"></i> Salida</a></li>
+                <li><a href="{{ url('admin/almacen-cliente') }}"><i class="fa fa-circle-o"></i> Clientes</a></li>
               </ul>
             </li>
                
             @if (Auth::user()->name == 'admin')        
               <li class="treeview">
-                <a href="{{ url('/seguridad-usuario') }}">
+                <a href="{{ url('admin/seguridad-usuario') }}">
                   <i class="fa fa-folder"></i> <span>Acceso</span>
                 </a>
               </li>
             @endif
 
              <li class="treeview">
-                <li><a href="{{ url('/reporte-kardex') }}"><i class="fa fa-circle-o"></i> Reportes</a></li>
+                <li><a href="{{ url('admin/reporte-kardex') }}"><i class="fa fa-circle-o"></i> Reportes</a></li>
                 <i class="fa fa-angle-left pull-right"></i>
               </a>
             </li>

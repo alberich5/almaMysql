@@ -1,6 +1,6 @@
 <?php
 
-namespace Omar\Http\Controllers;
+namespace Omar\Http\Controllers\auxiliar;
 
 use Illuminate\Http\Request;
 
