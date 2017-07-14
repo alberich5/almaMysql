@@ -151,6 +151,7 @@ function mostrarValores(){
 }
 
  function agregar(){
+    alert("se encuentra dentro del boton agregar");
     datosArticulo=document.getElementById('pidarticulo').value.split('_');
     
 
